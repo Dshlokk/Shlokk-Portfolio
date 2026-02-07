@@ -1684,9 +1684,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 36px;
-  height: 36px;
-  border: 2px solid rgba(99, 102, 241, 0.8);
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(99, 102, 241, 0.95);
   border-radius: 50%;
   pointer-events: none;
   z-index: 10000;
@@ -1696,7 +1696,6 @@ body {
     width 0.2s ease,
     height 0.2s ease,
     border-color 0.2s ease;
-  backdrop-filter: blur(2px);
 }
 
 .magic-cursor-dot {
@@ -1705,7 +1704,7 @@ body {
   left: 0;
   width: 8px;
   height: 8px;
-  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  background: #ffffff;
   border-radius: 50%;
   pointer-events: none;
   z-index: 10001;
@@ -1714,8 +1713,8 @@ body {
 
 /* Hover expand */
 .magic-hover .magic-cursor {
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-color: #22d3ee;
 }
 
