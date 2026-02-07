@@ -149,6 +149,11 @@ body {
 .hero-section {
   min-height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 6vw;
+  padding-right: 6vw;
   overflow: hidden;
 }
 
@@ -170,9 +175,16 @@ body {
   z-index: 2;
 }
 
+.hero-content {
+  max-width: 520px;
+  text-align: left;
+}
 
 .profile-image-container {
-    position: relative;
+  position: absolute;
+  top: 120px;
+  left: 6vw;
+  z-index: 3;
     animation: fadeInLeft 1s ease;
 }
 
@@ -1420,4 +1432,13 @@ body {
     100% {
         transform: translateY(0px);
     }
+}
+#vanta-bg canvas {
+  position: absolute !important;
+  inset: 0;
+  z-index: 0 !important;
+}
+.hero-section > * {
+  position: relative;
+  z-index: 2;
 }
