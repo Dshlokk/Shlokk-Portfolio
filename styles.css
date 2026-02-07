@@ -1402,3 +1402,13 @@ body {
         transform: translateY(0px);
     }
 }
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section * {
+  position: relative;
+  z-index: 2;
+}
