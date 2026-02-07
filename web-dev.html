@@ -10,16 +10,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-content">
-            <a href="index.html" class="nav-logo">DIVYA SHLOKK</a>
-            <div class="nav-links">
-                <a href="web-dev.html" class="nav-link active">Web Development</a>
-                <a href="creative.html" class="nav-link">Creative Direction</a>
-                <a href="video.html" class="nav-link">Video Editing</a>
-            </div>
-        </div>
-    </nav>
+   <nav class="nav">
+  <div class="nav-content">
+    <a href="index.html" class="nav-logo">DIVYA SHLOKK</a>
+
+    <div class="nav-links">
+      <a href="web-dev.html" class="nav-link">Web Development</a>
+      <a href="creative.html" class="nav-link">Creative Direction</a>
+      <a href="video.html" class="nav-link">Video Editing</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
     <main class="page-container">
         <div class="page-header">
@@ -162,5 +169,13 @@
         });
     </script>
     <script src="script.js"></script>
+    <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
