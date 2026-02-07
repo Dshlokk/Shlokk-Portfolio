@@ -1402,3 +1402,98 @@ body {
         transform: translateY(0px);
     }
 }
+/* =========================
+   MOBILE OPTIMIZATION ONLY
+   ========================= */
+
+/* Small tablets & phones */
+@media (max-width: 768px) {
+
+  /* HERO LAYOUT */
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  /* PROFILE IMAGE */
+  .profile-image-container {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+    animation: none; /* less motion on mobile */
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* REMOVE DECORATIVE RINGS ON MOBILE */
+  .profile-bg,
+  .circle,
+  .circle-one,
+  .circle-two {
+    display: none;
+  }
+
+  /* HERO TEXT */
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+
+  /* CTA BUTTONS */
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* SKILLS GRID */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .profile-image-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  /* Floating social buttons smaller */
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+}
+
