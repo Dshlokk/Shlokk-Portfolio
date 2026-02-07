@@ -147,13 +147,27 @@ body {
 
 /* Hero Section */
 .hero-section {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: var(--spacing-lg) var(--spacing-md);
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
-    align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(11,12,16,0.2) 0%,
+    rgba(11,12,16,0.7) 55%,
+    rgba(11,12,16,0.95) 100%
+  );
+  z-index: 1;
+}
+
+.hero-section * {
+  position: relative;
+  z-index: 2;
 }
 
 .profile-image-container {
@@ -1401,14 +1415,4 @@ body {
     100% {
         transform: translateY(0px);
     }
-}
-.hero-section {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-section * {
-  position: relative;
-  z-index: 2;
 }

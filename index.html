@@ -131,24 +131,27 @@
     <a href="https://www.instagram.com/d.shlokk/" target="_blank" rel="noopener noreferrer" class="social-link instagram">IG</a>
     <a href="https://www.linkedin.com/in/divya-shlokk-3ba0252a6/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">IN</a>
   </div>
-
-  <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
-  <script>
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && window.innerWidth > 768) {
-      VANTA.RINGS({
-        el: "#vanta-bg",
-        mouseControls: true,
-        touchControls: false,
-        gyroControls: false,
-        scale: 1,
-        scaleMobile: 1,
-        backgroundColor: 0x0f0f0f,
-        color: 0x6366f1
-      });
-    }
-  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+<script>
+if (window.innerWidth > 768) {
+  VANTA.RINGS({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: false,
+    gyroControls: false,
+    minHeight: 200,
+    minWidth: 200,
+    scale: 0.85,
+    scaleMobile: 1,
+    backgroundColor: 0x0b0c10,
+    color: 0x6366f1,
+    color2: 0x22d3ee,
+    spacing: 28,
+    chaos: 3
+  })
+}
+</script>
 
 </body>
 </html>
