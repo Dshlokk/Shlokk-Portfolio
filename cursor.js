@@ -1,22 +1,26 @@
-const cursor = document.querySelector('.magic-cursor');
-const dot = document.querySelector('.magic-cursor-dot');
+const cursor = document.querySelector(".magic-cursor");
+const dot = document.querySelector(".magic-cursor-dot");
 
 if (cursor && dot) {
-  document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    dot.style.left = e.clientX + 'px';
-    dot.style.top = e.clientY + 'px';
+  document.addEventListener("mousemove", (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    cursor.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+    dot.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
   });
 
-  const hoverTargets = 'a, button, .cta-button, .skill-card, .social-link';
+  const hoverElements = document.querySelectorAll(
+    "a, button, .cta-button, .skill-card, .website-card"
+  );
 
-  document.querySelectorAll(hoverTargets).forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      document.body.classList.add('magic-hover');
+  hoverElements.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      document.body.classList.add("magic-hover");
     });
-    el.addEventListener('mouseleave', () => {
-      document.body.classList.remove('magic-hover');
+
+    el.addEventListener("mouseleave", () => {
+      document.body.classList.remove("magic-hover");
     });
   });
 }
