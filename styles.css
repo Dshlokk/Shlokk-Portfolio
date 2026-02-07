@@ -152,15 +152,15 @@ body {
   overflow: hidden;
 }
 
-.hero-section::after {
+.hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    circle at center,
-    rgba(11,12,16,0.2) 0%,
-    rgba(11,12,16,0.7) 55%,
-    rgba(11,12,16,0.95) 100%
+    circle at 55% 55%,
+    rgba(9,10,15,0.15) 0%,
+    rgba(9,10,15,0.65) 45%,
+    rgba(9,10,15,0.95) 75%
   );
   z-index: 1;
 }
@@ -169,6 +169,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 
 .profile-image-container {
     position: relative;
@@ -1286,6 +1287,10 @@ body {
     .hero-title {
         font-size: 2.5rem;
     }
+    .hero-title {
+  text-shadow: 0 0 18px rgba(99,102,241,0.35);
+}
+
     
     .skills-grid {
         grid-template-columns: 1fr;
