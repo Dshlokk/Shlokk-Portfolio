@@ -77,35 +77,36 @@ body {
   text-decoration: none;
 }
 
-/* HERO */
+/* LAYOUT */
 .home-container {
   padding-top: 100px;
 }
 
+/* HERO */
 .hero-section {
   min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 6vw;
-  padding-right: 6vw;
-  overflow: hidden;
+  padding: 0 6vw;
 }
 
+/* dark fade so hero ENDS cleanly */
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(
     circle at 55% 55%,
-    rgba(9, 10, 15, 0.15) 0%,
-    rgba(9, 10, 15, 0.65) 45%,
-    rgba(9, 10, 15, 0.95) 75%
+    rgba(9,10,15,0.15) 0%,
+    rgba(9,10,15,0.65) 45%,
+    rgba(9,10,15,0.95) 75%
   );
   z-index: 1;
 }
 
+/* VANTA */
 #vanta-bg {
   position: relative;
 }
@@ -134,7 +135,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 3;
-  animation: float 5s ease-in-out infinite;
+  animation: floatY 5s ease-in-out infinite;
 }
 
 .profile-bg {
@@ -153,7 +154,7 @@ body {
   border: 3px solid #7c6cff;
   top: 0;
   left: 0;
-  animation: float 6s ease-in-out infinite;
+  animation: floatY 6s ease-in-out infinite;
 }
 
 .circle-two {
@@ -162,7 +163,7 @@ body {
   border: 2px solid #00d4ff;
   bottom: -20px;
   right: -20px;
-  animation: float 9s ease-in-out infinite;
+  animation: floatY 9s ease-in-out infinite;
 }
 
 .profile-image {
@@ -172,14 +173,15 @@ body {
   overflow: hidden;
   border: 4px solid var(--primary);
   box-shadow:
-    0 30px 80px rgba(99, 102, 241, 0.45),
-    0 0 0 8px rgba(99, 102, 241, 0.08);
+    0 30px 80px rgba(99,102,241,0.45),
+    0 0 0 8px rgba(99,102,241,0.08);
 }
 
 .profile-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 /* HERO CONTENT */
@@ -229,11 +231,11 @@ body {
   color: var(--light);
 }
 
-/* FLOAT ANIMATION */
-@keyframes float {
-  0% { transform: translateY(-50%) translateY(0); }
-  50% { transform: translateY(-50%) translateY(-10px); }
-  100% { transform: translateY(-50%) translateY(0); }
+/* FIXED FLOAT (NO TRANSFORM CONFLICT) */
+@keyframes floatY {
+  0% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+  100% { translate: 0 0; }
 }
 
 /* RESPONSIVE */
