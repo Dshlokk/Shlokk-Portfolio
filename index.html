@@ -1,248 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divya Shlokk – Creative Professional</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Shlokk – Creative Professional</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Work Sans', sans-serif;
-      background: #0f0f23;
-      color: #ffffff;
-      overflow-x: hidden;
-    }
+    <style>
+        /* Fallback critical styles if styles.css is missing */
+        body {
+            margin: 0;
+            font-family: 'Work Sans', sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+        }
 
-    #vanta-bg {
-      position: relative;
-    }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
 
-    #vanta-bg canvas {
-      position: absolute !important;
-      inset: 0;
-      z-index: 0 !important;
-      pointer-events: none;
-    }
-
-    .hero-section {
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 0 6vw;
-    }
-
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        circle at 55% 55%,
-        rgba(9,10,15,0.15) 0%,
-        rgba(9,10,15,0.65) 45%,
-        rgba(9,10,15,0.95) 75%
-      );
-      z-index: 1;
-    }
-
-    .hero-section > * {
-      position: relative;
-      z-index: 2;
-    }
-
-    .profile-image-container {
-      position: absolute;
-      left: 6vw;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 380px;
-      height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 3;
-      animation: float 5s ease-in-out infinite;
-    }
-
-    .profile-bg {
-      position: absolute;
-      inset: 0;
-    }
-
-    .circle {
-      position: absolute;
-      border-radius: 50%;
-    }
-
-    .circle-one {
-      width: 220px;
-      height: 220px;
-      border: 3px solid #7c6cff;
-      top: 0;
-      left: 0;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .circle-two {
-      width: 300px;
-      height: 300px;
-      border: 2px solid #00d4ff;
-      bottom: -20px;
-      right: -20px;
-      animation: float 9s ease-in-out infinite;
-    }
-
-    .profile-image {
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 4px solid #6366f1;
-      box-shadow:
-        0 30px 80px rgba(99,102,241,0.45),
-        0 0 0 8px rgba(99,102,241,0.08);
-    }
-
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .hero-content {
-      margin-left: 420px;
-      max-width: 520px;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(-50%) translateY(0); }
-      50% { transform: translateY(-50%) translateY(-10px); }
-      100% { transform: translateY(-50%) translateY(0); }
-    }
-
-    @media (max-width: 1024px) {
-      .profile-image-container {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        margin: 0 auto 2rem;
-      }
-
-      .hero-content {
-        margin-left: 0;
-        text-align: center;
-      }
-    }
-  </style>
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
 
-<nav class="nav">
-  <div class="nav-content">
-    <a href="index.html" class="nav-logo">DIVYA SHLOKK</a>
-    <div class="nav-links">
-      <a href="web-dev.html" class="nav-link">Web Development</a>
-      <a href="creative.html" class="nav-link">Creative Direction</a>
-      <a href="video.html" class="nav-link">Video Editing</a>
-    </div>
-  </div>
-</nav>
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">DIVYA SHLOKK</a>
+            <div class="nav-links">
+                <a href="web-dev.html" class="nav-link">Web Development</a>
+                <a href="creative.html" class="nav-link">Creative Direction</a>
+                <a href="video.html" class="nav-link">Video Editing</a>
+            </div>
+        </div>
+    </nav>
 
-<main class="home-container">
-  <section class="hero-section" id="vanta-bg">
+    <!-- MAIN -->
+    <main class="home-container">
+        <div class="hero-section">
 
-    <div class="profile-image-container">
-      <div class="profile-bg">
+          <div class="profile-image-container">
+
+    <div class="profile-bg">
         <span class="circle circle-one"></span>
         <span class="circle circle-two"></span>
-      </div>
-      <div class="profile-image">
+    </div>
+
+    <div class="profile-image">
         <img src="./assets/divya.png" alt="Divya Shlokk">
-      </div>
+
     </div>
 
-    <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="title-line">Multi-Disciplinary</span>
-        <span class="title-line">Creative</span>
-      </h1>
-
-      <div class="hero-description">
-        <p>A passionate creator bridging web development, creative direction, and video editing.</p>
-        <p>From responsive websites to compelling visuals, I bring technical depth and creative vision.</p>
-      </div>
-
-      <div class="cta-buttons">
-        <a href="web-dev.html" class="cta-button primary">View My Work</a>
-        <a href="https://wa.me/918660438751" class="cta-button secondary" target="_blank">Get In Touch</a>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="skills-grid">
-    <div class="skill-card">
-      <div class="skill-icon">🌐</div>
-      <h3>Web Development</h3>
-      <p>Crafting modern websites with VibeCoding & WordPress</p>
-      <a href="web-dev.html" class="skill-link">Explore →</a>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">🎬</div>
-      <h3>Creative Direction</h3>
-      <p>Visual storytelling, branding & production</p>
-      <a href="creative.html" class="skill-link">Explore →</a>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-icon">✂️</div>
-      <h3>Video Editing</h3>
-      <p>Editing that turns footage into emotion</p>
-      <a href="video.html" class="skill-link">Explore →</a>
-    </div>
-  </section>
-</main>
-
-<div class="social-float">
-  <a href="https://www.instagram.com/d.shlokk/" target="_blank" class="social-link instagram">IG</a>
-  <a href="https://www.linkedin.com/in/divya-shlokk-3ba0252a6/" target="_blank" class="social-link linkedin">IN</a>
 </div>
 
-<script>
-if (window.innerWidth > 768) {
-  VANTA.RINGS({
-    el: "#vanta-bg",
-    mouseControls: false,
-    touchControls: false,
-    gyroControls: false,
 
-    minHeight: 200,
-    minWidth: 200,
+            <!-- HERO CONTENT -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Multi-Disciplinary</span>
+                    <span class="title-line">Creative</span>
+                </h1>
 
-    scale: 1.15,        // ⬅ makes animation larger
-    scaleMobile: 1,
+                <div class="hero-description">
+                    <p>
+                        A passionate creator bridging web development, creative direction,
+                        and video editing. I transform ideas into digital experiences
+                        that captivate and inspire.
+                    </p>
+                    <p>
+                        From building responsive websites to directing compelling visual
+                        narratives, I bring a blend of technical depth and creative vision
+                        to every project.
+                    </p>
+                </div>
 
-    backgroundColor: 0x090a0f,
+                <!-- CTA -->
+                <div class="cta-buttons">
+                    <a href="web-dev.html" class="cta-button primary">
+                        View My Work
+                    </a>
 
-    color: 0x6366f1,
-    color2: 0x22d3ee,
+                    <a 
+                        href="https://wa.me/918660438751?text=Hey%20there%2C%20let%E2%80%99s%20connect%20for%20a%20project"
+                        class="cta-button secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    spacing: 34,        // ⬅ spreads rings wider
-    chaos: 2.2          // ⬅ more dramatic motion
-  })
-}
-</script>
+        <!-- SKILLS -->
+        <div class="skills-grid">
+            <div class="skill-card" style="--delay: 0s">
+                <div class="skill-icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>Crafting modern websites with VibeCoding & WordPress</p>
+                <a href="web-dev.html" class="skill-link">Explore →</a>
+            </div>
 
+            <div class="skill-card" style="--delay: 0.1s">
+                <div class="skill-icon">🎬</div>
+                <h3>Creative Direction</h3>
+                <p>Visual storytelling, branding & production</p>
+                <a href="creative.html" class="skill-link">Explore →</a>
+            </div>
+
+            <div class="skill-card" style="--delay: 0.2s">
+                <div class="skill-icon">✂️</div>
+                <h3>Video Editing</h3>
+                <p>Editing that turns footage into emotion</p>
+                <a href="video.html" class="skill-link">Explore →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- SOCIAL FLOAT -->
+    <div class="social-float">
+        <a 
+            href="https://www.instagram.com/d.shlokk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link instagram"
+            aria-label="Instagram"
+        >
+            IG
+        </a>
+
+        <a 
+            href="https://www.linkedin.com/in/divya-shlokk-3ba0252a6/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link linkedin"
+            aria-label="LinkedIn"
+        >
+            IN
+        </a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
