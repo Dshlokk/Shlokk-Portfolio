@@ -1672,3 +1672,61 @@ body:not(:has(.home-container)) .whatsapp-float::before {
     display: none;
   }
 }
+/* =========================
+   MAGIC CURSOR
+   ========================= */
+
+body {
+  cursor: none;
+}
+
+.magic-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(99, 102, 241, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.15s ease,
+    width 0.2s ease,
+    height 0.2s ease,
+    border-color 0.2s ease;
+  backdrop-filter: blur(2px);
+}
+
+.magic-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover expand */
+.magic-hover .magic-cursor {
+  width: 56px;
+  height: 56px;
+  border-color: #22d3ee;
+}
+
+/* Disable on mobile */
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  .magic-cursor,
+  .magic-cursor-dot {
+    display: none;
+  }
+}
