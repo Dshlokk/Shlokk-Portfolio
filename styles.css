@@ -1319,17 +1319,15 @@ body {
 }
 
 .profile-image-container {
-    animation: float 12s ease-in-out infinite;
-}
+    position: relative;
+    width: 380px;   /* ⬅ bigger */
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.circle-one {
-    animation: float 16s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
-
-.circle-two {
-    animation: float 22s ease-in-out infinite;
-}
-
 
 /* Decorative circles */
 .profile-bg {
@@ -1403,7 +1401,4 @@ body {
     100% {
         transform: translateY(0px);
     }
-}
-.profile-bg {
-    display: none;
 }
